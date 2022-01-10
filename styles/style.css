@@ -1,0 +1,80 @@
+ body {
+    background-color: rgb(129, 136, 238);
+    height: 100%;
+}
+/*
+
+.main {
+    background-color: red;
+    transform: translateY(50%);
+}
+
+button {
+    background-color: rgb(70, 70, 221);
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+input {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+}
+
+.formularioNombre {
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.formularioNombre input {
+    display: inline;
+    width: 70%;
+    height: 60px;
+    margin: 20px;
+    padding: 2px 20px;
+    font-size: 16px;
+}
+
+.formularioNombre button {
+    width: 76%;
+    height: 60px;
+    padding: 2px 20px;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+
+.formularioNombre {
+    width: 550px;
+}
+
+.btn-pregunta {
+    background-color: rgb(224, 235, 255);
+    /* color: white; */
+    width: 40%;
+    height: 100px;
+    margin: 20px;
+    border: none;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    border-top: 2px solid blue;
+    cursor: pointer;
+}
+
+
+.num-pregunta {
+    padding: 5px 12px;
+    border-radius: 100%;
+    color: white;
+}
+
+.footer {
+    border-top: 1px solid #e9ecef;
+}

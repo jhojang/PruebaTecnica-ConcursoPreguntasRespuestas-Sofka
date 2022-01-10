@@ -1,8 +1,18 @@
 class Jugador {
 
-    constructor(nombre) {
-      this.nombre = nombre;
-    }
+  nombre;
+
+  constructor() {
+  
+  }
+
+  getNombre() {
+    return this.nombre;
+  }
+
+  setNombre(nombre) {
+    this.nombre = nombre;
+  }
   
   }
   
