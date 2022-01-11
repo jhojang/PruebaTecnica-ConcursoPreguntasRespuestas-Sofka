@@ -1,12 +1,18 @@
 class Categoria {
 
-  dificultad = 1
+  dificultad = 0
+  ronda = []
   
   constructor() {
+
   }
 
   getDificultad() {
     return this.dificultad;
+  }
+
+  aleatorizarPeguntasDeRonda(ronda) {
+    this.ronda = ronda;
   }
 
   aumentarDificultad() {
