@@ -1,4 +1,4 @@
-export const BancoPreguntas = [
+export const ListadoPreguntas = [
   {
     nombreCategoria: "Colores",
     preguntas: [

@@ -130,7 +130,7 @@ export class UserInterface {
     const container = `
     <div class="container rounded bg-white col-6">
       <div class="row modal-header d-flex justify-content-center">
-        <div class="enunciado ml-3 align-self-center"><h5>Fin del Juego</h5></div>
+        <div class="enunciado ml-3 align-self-center"><h5>Historial</h5></div>
       </div>
       <div class="text-center row modal-body">
         <ul class="historialContainer container rounded">

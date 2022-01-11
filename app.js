@@ -1,4 +1,4 @@
-import { BancoPreguntas } from "./data/BancoPreguntas copy.js";
+import { ListadoPreguntas } from "./data/ListadoPreguntas.js";
 import { Categoria } from "./models/Categoria.js";
 import { Jugador } from "./models/Jugador.js";
 import { Pregunta } from "./models/Pregunta.js";
@@ -51,7 +51,7 @@ const renderPage = (jugador, pregunta, premio, userInterface) => {
                                 if (pregunta.categoria.getDificultad() === 5) {
                                     guardarHistorial(jugador, pregunta);
                                 } else {
-                                    pregunta.categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad + 1]);
+                                    pregunta.categoria.aleatorizarPeguntasDeRonda(ListadoPreguntas[dificultad + 1]);
                                     pregunta.aumentarPropiedades()
                                     localStorage.setItem("acumulado", premio.getAcumulado())
                                     renderPage(jugador, pregunta, premio, userInterface)
@@ -127,7 +127,7 @@ const main = () => {
         dificultad = localStorage.getItem("rondaActual")
         console.log(dificultad)
     }
-    categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad]);
+    categoria.aleatorizarPeguntasDeRonda(ListadoPreguntas[dificultad]);
     const jugador = new Jugador();
     const pregunta = new Pregunta(categoria);
     console.log(pregunta.getNumPregunta())
