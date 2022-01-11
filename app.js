@@ -8,6 +8,9 @@ import { borrarRondaPuntajePregunta, getFromLocalStorage } from "./helper/localS
 
 
 const renderPage = (jugador, pregunta, premio, userInterface) => {
+
+    getFromLocalStorage(pregunta, premio); 
+    console.log("Numbpregunta: " + pregunta.getNumPregunta())
     
     if (localStorage.getItem("Jugador") === null) {
         userInterface.getName((inputNombre) => {
@@ -17,7 +20,7 @@ const renderPage = (jugador, pregunta, premio, userInterface) => {
             location.reload();
         });
     } else {
-        getFromLocalStorage(pregunta, premio); // Este es un helper, una función externa que permite no repetir mucho código
+        // Este es un helper, una función externa que permite no repetir mucho código
 
         console.log("Hay un usuario activo")
         jugador.setNombre(localStorage.getItem("Jugador"))
@@ -46,7 +49,7 @@ const renderPage = (jugador, pregunta, premio, userInterface) => {
                                 
                                 console.log(pregunta.categoria.getDificultad())
                                 if (pregunta.categoria.getDificultad() === 5) {
-                                    guardarHistorial(juego, pregunta);
+                                    guardarHistorial(jugador, pregunta);
                                 } else {
                                     pregunta.categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad + 1]);
                                     pregunta.aumentarPropiedades()
@@ -93,7 +96,7 @@ const renderPage = (jugador, pregunta, premio, userInterface) => {
         const historial = JSON.parse(localStorage.getItem("historial")) === null ? [] : JSON.parse(localStorage.getItem("historial"));
         historial.push({
             nombre: jugador.getNombre(),
-            premioAcumulado: 0,
+            premioAcumulado: premio.getAcumulado(),
             rondasGanadas: pregunta.categoria.getDificultad()
         })
         console.log(historial)
@@ -127,8 +130,11 @@ const main = () => {
     categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad]);
     const jugador = new Jugador();
     const pregunta = new Pregunta(categoria);
+    console.log(pregunta.getNumPregunta())
     const premio = new Premio();
     const userInterface = new UserInterface();
+    getFromLocalStorage(pregunta, premio); 
+    console.log(pregunta.getNumPregunta())
     renderPage(jugador, pregunta, premio, userInterface)
 }
 

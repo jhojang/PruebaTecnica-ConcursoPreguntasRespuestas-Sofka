@@ -1,210 +1,210 @@
 export const BancoPreguntas = [
   {
-    nombreCategoria: "primera",
+    nombreCategoria: "Colores",
     preguntas: [
       {
         
-        enunciado: "Enunciado primera pregunta",
+        enunciado: "¿Qué color sale de combinar amarillo y rojo?",
         opciones: [
-          "pregunta 1", "pregunta 2", "pregunta 3", "pregunta 4"
+          "Morado", "Naranja", "Azul", "Gris"
         ],
-        opcionCorrecta: "pregunta 2"
+        opcionCorrecta: "Naranja"
       },
       {
-        enunciado: "Enunciado segunda pregunta",
+        enunciado: "¿Qué color sale combinar azúl y rojo?",
         opciones: [
-          "pregunta 5", "pregunta 6", "pregunta 7", "pregunta 8"
+          "Rosado", "Verde", "Amarillo", "Morado"
         ],
-        opcionCorrecta: "pregunta 8"
+        opcionCorrecta: "Morado"
       },
       {
-        enunciado: "Enunciado tercera pregunta",
+        enunciado: "¿Con qué color debemos combinar el amarillo para que se produzca el color verde?",
         opciones: [
-          "pregunta 9", "pregunta 10", "pregunta 11", "pregunta 12"
+          "Negro", "Azul", "Beige", "Rojo"
         ],
-        opcionCorrecta: "pregunta 10"
+        opcionCorrecta: "Azul"
       },
       {
-        enunciado: "Enunciado cuarta pregunta",
+        enunciado: "¿Cuál de los siguientes es un color cálido?",
         opciones: [
-          "pregunta 13", "pregunta 14", "pregunta 15", "pregunta 16"
+          "Negro", "Morado", "Amarillo", "Gris"
         ],
-        opcionCorrecta: "pregunta 15"
+        opcionCorrecta: "Amarillo"
       },
       {
-        enunciado: "Enunciado quinta pregunta",
+        enunciado: "¿Cuáles son los colores primarios?",
         opciones: [
-          "pregunta 17", "pregunta 18", "pregunta 19", "pregunta 20"
+          "Los que no salen de ninguna combinación", "Los que sale de una combinación", "Los que salen de 2 colores", "Los que salen de 3 colores"
         ],
-        opcionCorrecta: "pregunta 17"
+        opcionCorrecta: "Los que no salen de ninguna combinación"
       },
     ]
   },
 
   {
-    nombreCategoria: "SEGUNDA ",
+    nombreCategoria: "Caricaturas",
     preguntas: [
       {
         
-        enunciado: "Enunciado primera pregunta s2",
+        enunciado: "Son personajes muy amarillos",
         opciones: [
-          "pregunta 1 s2", "pregunta 2 s2", "pregunta 3 s2", "pregunta 4 s2"
+          "Padre de Familia", "Los simpsons", "South Park", "Jonny BRavo"
         ],
-        opcionCorrecta: "pregunta 2 s2"
+        opcionCorrecta: "Los simpsons"
       },
       {
-        enunciado: "Enunciado segunda pregunta s2",
+        enunciado: "Siempre anda con una espada y su perro se llama Jake",
         opciones: [
-          "pregunta 5 s2", "pregunta 6 s2", "pregunta 7 s2", "pregunta 8 s2"
+          "Un show más", "Digimon", "Fineas y Ferb", "Hora de Aventura"
         ],
-        opcionCorrecta: "pregunta 8 s2"
+        opcionCorrecta: "Hora de Aventura"
       },
       {
-        enunciado: "Enunciado tercera pregunta s2",
+        enunciado: "Son grandes ingenierons a pesar de ser tan jovenes",
         opciones: [
-          "pregunta 9 s2", "pregunta 10 s2", "pregunta 11 s2", "pregunta 12 s2"
+          "Los chicos del barrio", "Fineas y Ferb", "Un show mas", "Clarence"
         ],
-        opcionCorrecta: "pregunta 10 s2"
+        opcionCorrecta: "Fineas y Ferb"
       },
       {
-        enunciado: "Enunciado cuarta pregunta s2",
+        enunciado: "Es un ninja y tiene el cabello amarillo",
         opciones: [
-          "pregunta 13 s2", "pregunta 14 s2", "pregunta 15 s2", "pregunta 16 s2"
+          "Clarence", "Jonny Bravo", "Naruto", "Hora de aventura"
         ],
-        opcionCorrecta: "pregunta 15 s2"
+        opcionCorrecta: "Naruto"
       },
       {
-        enunciado: "Enunciado quinta pregunta s2",
+        enunciado: "Los protagonistas son un pájaro y un mapache",
         opciones: [
-          "pregunta 17 s2", "pregunta 18 s2", "pregunta 19 s2", "pregunta 20 s2"
+          "Los chicos del barrio", "Stiven Universe", "Un show mas", "La pantera rosa"
         ],
-        opcionCorrecta: "pregunta 17 s2"
+        opcionCorrecta: "Un show mas"
       },
     ]
   },
 
   {
-    nombreCategoria: "TERCERA",
+    nombreCategoria: "Capitales",
     preguntas: [
       {
         
-        enunciado: "Enunciado primera pregunta s3",
+        enunciado: "La capital de Rusia es",
         opciones: [
-          "pregunta 1 s3", "pregunta 2 s3", "pregunta 3 s3", "pregunta 4 s3"
+          "Moscu", "Lisboa", "Kosobo", "Pekin"
         ],
-        opcionCorrecta: "pregunta 2 s3"
+        opcionCorrecta: "Moscu"
       },
       {
-        enunciado: "Enunciado segunda pregunta s3",
+        enunciado: "La capital de Brasil es",
         opciones: [
-          "pregunta 5 s3", "pregunta 6 s3", "pregunta 7 s3", "pregunta 8 s3"
+          "Amazonas", "La Paz", "Buenos Aires", "Brasilia"
         ],
-        opcionCorrecta: "pregunta 8 s3"
+        opcionCorrecta: "Brasilia"
       },
       {
-        enunciado: "Enunciado tercera pregunta s3",
+        enunciado: "La capital de Turquía es",
         opciones: [
-          "pregunta 9 s3", "pregunta 10 s3", "pregunta 11 s3", "pregunta 12 s3"
+          "Ankara", "Estambul", "Manila", "Dubai"
         ],
-        opcionCorrecta: "pregunta 10 s3"
+        opcionCorrecta: "Estambul"
       },
       {
-        enunciado: "Enunciado cuarta pregunta s3",
+        enunciado: "La capital de Japón es",
         opciones: [
-          "pregunta 13 s3", "pregunta 14 s3", "pregunta 15 s3", "pregunta 16 s3"
+          "Singapur", "Seul", "Tokio", "Pekin"
         ],
-        opcionCorrecta: "pregunta 15 s3"
+        opcionCorrecta: "Tokio"
       },
       {
-        enunciado: "Enunciado quinta pregunta s3",
+        enunciado: "La capital de Ecuador es",
         opciones: [
-          "pregunta 17 s3", "pregunta 18 s3", "pregunta 19 s3", "pregunta 20 s3"
+          "Quito", "Lima", "La Paz", "Asunción"
         ],
-        opcionCorrecta: "pregunta 17 s3"
+        opcionCorrecta: "Quito"
       },
     ]
   },
 
   {
-    nombreCategoria: "Cuarta",
+    nombreCategoria: "Física",
     preguntas: [
       {
         
-        enunciado: "Enunciado primera pregunta s4",
+        enunciado: "Las unidades de la velocidad en el sistema internacional de unidades son",
         opciones: [
-          "pregunta 1 s4", "pregunta 2 s4", "pregunta 3 s4", "pregunta 4 s4"
+          "metro sobre segundo cuadrado", "metro sobre segundo", "masa por velocidad", "kilogramo por metro cuadrado"
         ],
-        opcionCorrecta: "pregunta 2 s4"
+        opcionCorrecta: "metro sobre segundo"
       },
       {
-        enunciado: "Enunciado segunda pregunta s4",
+        enunciado: "Si se dejan caer dos objetos de distinta masa desde la misma altura, ¿cuál de los dos llega primero al suelo?",
         opciones: [
-          "pregunta 5 s4", "pregunta 6 s4", "pregunta 7 s4", "pregunta 8 s4"
+          "EL más pesado", "El más liviano", "A veces uno, a veces otro", "Tocan el suelo al mismo tiempo"
         ],
-        opcionCorrecta: "pregunta 8 s4"
+        opcionCorrecta: "Tocan el suelo al mismo tiempo"
       },
       {
-        enunciado: "Enunciado tercera pregunta s4",
+        enunciado: "La velocidad de la luz en el vacío",
         opciones: [
-          "pregunta 9 s4", "pregunta 10 s4", "pregunta 11 s4", "pregunta 12 s4"
+          "20.000km/s", "300.000km/s", "299.724km/h", "2450km/s"
         ],
-        opcionCorrecta: "pregunta 10 s4"
+        opcionCorrecta: "300.000km/s"
       },
       {
-        enunciado: "Enunciado cuarta pregunta s4",
+        enunciado: "Estableció las leyes de la fuerza y la gravitación universal",
         opciones: [
-          "pregunta 13 s4", "pregunta 14 s4", "pregunta 15 s4", "pregunta 16 s4"
+          "Galileo Galilei", "Albert Einstein", "Isaac Newton", "Niels Bohr"
         ],
-        opcionCorrecta: "pregunta 15 s4"
+        opcionCorrecta: "Isaac Newton"
       },
       {
-        enunciado: "Enunciado quinta pregunta s4",
+        enunciado: "Realizó grandes investigaciones sobre las oscilaciones que realizaba el péndulo",
         opciones: [
-          "pregunta 17 s4", "pregunta 18 s4", "pregunta 19 s4", "pregunta 20 s4"
+          "Galileo Galilei", "Max Plank", "Erwin Shroddinger", "Isaac Newton"
         ],
-        opcionCorrecta: "pregunta 17 s4"
+        opcionCorrecta: "Galileo Galilei"
       },
     ]
   },
 
   {
-    nombreCategoria: "Quinta",
+    nombreCategoria: "Estrellas",
     preguntas: [
       {
         
-        enunciado: "Enunciado primera pregunta s5",
+        enunciado: "¿Qué es una supergigante roja?",
         opciones: [
-          "pregunta 1 s5", "pregunta 2 s5", "pregunta 3 s5", "pregunta 4 s5"
+          "Es un tipo de estrella de neutrones alimentada con un campo magnético extremadamente fuerte", "Es una estrella con masa comprendida entre 10 y 50 masas solares y enormes dimensiones", "Clase de galaxias activas muy lejanas que emiten energía electromagnetica que incluye luz visible", "Es un tipo de remanente estelar resultante del colapso gravitacional de una estrella"
         ],
-        opcionCorrecta: "pregunta 2 s5"
+        opcionCorrecta: "Es una estrella con masa comprendida entre 10 y 50 masas solares y enormes dimensiones"
       },
       {
-        enunciado: "Enunciado segunda pregunta s5",
+        enunciado: "¿Qué es un magnetar?",
         opciones: [
-          "pregunta 5 s5", "pregunta 6 s5", "pregunta 7 s5", "pregunta 8 s5"
+          "Es un tipo de remanente estelar resultante del colapso gravitacional de una estrella", "Es un remanente estelar que se genera cuando una estrella de masa menor que 10 masas solares ha agotado su combustible nuclear", "Es una estrella pequeña y relativamente fría de la secuencia principal", "Es un tipo de estrella de neutrones alimentada con un campo magnético extremadamente fuerte"
         ],
-        opcionCorrecta: "pregunta 8 s5"
+        opcionCorrecta: "Es un tipo de estrella de neutrones alimentada con un campo magnético extremadamente fuerte"
       },
       {
-        enunciado: "Enunciado tercera pregunta s5",
+        enunciado: "Es la estrella más brillante del cielo nocturno",
         opciones: [
-          "pregunta 9 s5", "pregunta 10 s5", "pregunta 11 s5", "pregunta 12 s5"
+          "Antares", "Sirio", "Rigel", "Aldebarán"
         ],
-        opcionCorrecta: "pregunta 10 s5"
+        opcionCorrecta: "Sirio"
       },
       {
-        enunciado: "Enunciado cuarta pregunta s5",
+        enunciado: "Es el sistema estelar más cercano al Sol",
         opciones: [
-          "pregunta 13 s5", "pregunta 14 s5", "pregunta 15 s5", "pregunta 16 s5"
+          "Sirius", "Procyon", "Alfa Centauri", "Betelgeuse"
         ],
-        opcionCorrecta: "pregunta 15 s5"
+        opcionCorrecta: "Alfa Centauri"
       },
       {
-        enunciado: "Enunciado quinta pregunta s5",
+        enunciado: "Qué son los púlsares",
         opciones: [
-          "pregunta 17 s5", "pregunta 18 s5", "pregunta 19 s5", "pregunta 20 s5"
+          "Estrellas de neutrones que giran a gran velocidad y emiten radiación periodica muy intensa", "Es una fuente de energía muy compacta y altamente variable, asociada a un agujero negro", "Clase de galaxias activas muy lejanas que emiten energía electromagnetica que incluye luz visible", "Es un sistema estelar compuesto de dos estrellas que orbitan mutuamente alrededor de un centro de masas común"
         ],
-        opcionCorrecta: "pregunta 17 s5"
+        opcionCorrecta: "Estrellas de neutrones que giran a gran velocidad y emiten radiación periodica muy intensa"
       },
     ]
   },

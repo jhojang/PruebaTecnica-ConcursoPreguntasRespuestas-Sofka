@@ -20,7 +20,9 @@ class Categoria {
   }
 
   aleatorizarPeguntasDeRonda(ronda) {
+
     this.ronda = ronda;
+    console.log(this.ronda);
   }
 
   aumentarDificultad() {

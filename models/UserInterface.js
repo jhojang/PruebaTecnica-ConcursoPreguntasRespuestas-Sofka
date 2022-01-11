@@ -34,7 +34,7 @@ export class UserInterface {
       <div class="container rounded bg-white col-6">
         <div class="row modal-header d-flex flex-nowrap  justify-content-start">
           <div  class="num-pregunta bg-primary align-self-center"><b>1</b></div>
-          <div class="enunciado ml-3 align-self-center"><h5>${pregunta.enunciado}</h5></div>
+          <div class="enunciado ml-3 align-self-center"><h5>${pregunta.categoria.ronda.preguntas[pregunta.numPregunta].enunciado}</h5></div>
         </div>
         <div class=" row modal-body">
           <div class="choicesContainer pl-5 container rounded">
@@ -43,7 +43,7 @@ export class UserInterface {
         </div>
         <div class="footer row d-flex justify-content-between pt-3">
           <div class="col-4"><h6>${jugador.getNombre()}</6></div>
-          <div class="col-4 text-center"><h4>Ronda ${pregunta.categoria.dificultad + 1}</h4></div>
+          <div class="col-4 text-center"><b>Ronda ${pregunta.categoria.dificultad + 1}: </b>${pregunta.categoria.ronda.nombreCategoria}</div>
           <div class="col-4 d-flex justify-content-between">
             <h6 class="">Puntaje: ${premio.getAcumulado()}</h6>
             <button class="btn-salir btn btn-primary mb-2 mt-0">Salir</button>
@@ -83,7 +83,7 @@ export class UserInterface {
       <div class="container rounded bg-white col-6">
         <div class=" row modal-body">
           <div class="choicesContainer container rounded pt-4 text-center">
-            <h3>Felicidades! ${jugador.getNombre()}, Has ganado la ronda número ${pregunta.categoria.dificultad + 1}</h3>
+            <h3>Felicidades! ${jugador.getNombre()}, Has ganado la ronda número ${pregunta.categoria.dificultad}</h3>
             <h5>Tienes una bonificación de ${premio.getAcumulado()} como premio por haber completado esta ronda sin equivocarte</h5>
           </div>
         </div>
