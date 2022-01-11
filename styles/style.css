@@ -57,17 +57,23 @@ input {
 }
 
 .btn-pregunta {
-    background-color: rgb(224, 235, 255);
+    background-color: rgb(225, 231, 241);
     /* color: white; */
     width: 40%;
     height: 100px;
     margin: 20px;
     border: none;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-    border-top: 2px solid blue;
+    border-top: 2px solid rgb(129, 136, 238);
     cursor: pointer;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
 }
 
+.btn-pregunta:hover {
+    background-color: rgb(129, 136, 238);
+    color: white;
+}
 
 .num-pregunta {
     padding: 5px 12px;
@@ -77,4 +83,8 @@ input {
 
 .footer {
     border-top: 1px solid #e9ecef;
+}
+
+li {
+    list-style: none;
 }

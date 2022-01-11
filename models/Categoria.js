@@ -11,6 +11,10 @@ class Categoria {
     return this.dificultad;
   }
 
+  setDificultad(dificultad) {
+    this.dificultad = dificultad
+  }
+
   resetDificultad() {
     this.dificultad = 0;
   }

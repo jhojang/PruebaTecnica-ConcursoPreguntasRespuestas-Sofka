@@ -10,17 +10,17 @@ class Pregunta {
     this.enunciado = this.categoria.ronda.preguntas[this.numPregunta].enunciado
   }
 
-  // actualizarPropiedades() {
-  //   this.respCorrecta = this.categoria.ronda.preguntas[this.categoria.dificultad].opcionCorrecta
-  //   this.enunciado = this.categoria.ronda.preguntas[this.numPregunta].enunciado
-  // }
 
   validarOpcion(optionSelected) {
+    console.log(this.respCorrecta)
+    console.log(optionSelected)
     if (this.respCorrecta === optionSelected) {
       return true;
     } else {
       return false;
     }
+
+    
   }
 
   aumentarNumPregunta() {
@@ -29,6 +29,7 @@ class Pregunta {
 
   aumentarPropiedades() {
     this.respCorrecta = this.categoria.ronda.preguntas[this.numPregunta].opcionCorrecta
+    localStorage.setItem("opcionCorrecta", this.respCorrecta)
     this.enunciado = this.categoria.ronda.preguntas[this.numPregunta].enunciado
   }
 
