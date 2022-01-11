@@ -1,5 +1,7 @@
 ### Notas importantes
 
+-Por favor abrirlo con Live Server para evitar errores o que no funcione.
+
 -Cuando el usuario abra el juego, lo primero que verá es un formulario para ingresar su nombre. Cuando ingrese su nombre, quedará logueado (Su nombre se almacena en el local Storage) y permanecerá así hasta que le dé click al botón "Terminar la sesión"
 
 -Como base de datos sólo usé una lista de preguntas de un archivo json que yo hice. Las categorías son: Colores, Caricaturas, Capitales, Física y Estrellas.
