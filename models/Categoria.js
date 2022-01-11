@@ -11,6 +11,10 @@ class Categoria {
     return this.dificultad;
   }
 
+  resetDificultad() {
+    this.dificultad = 0;
+  }
+
   aleatorizarPeguntasDeRonda(ronda) {
     this.ronda = ronda;
   }

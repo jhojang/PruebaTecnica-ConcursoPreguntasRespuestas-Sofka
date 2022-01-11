@@ -43,6 +43,7 @@ class Pregunta {
   setCategoria(categoria) {
     this.categoria = categoria
   }
+
   
 }
   

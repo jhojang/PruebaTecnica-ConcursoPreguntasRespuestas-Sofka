@@ -37,7 +37,6 @@ export class UserInterface {
 
     showQuestions(jugador, pregunta, premio, callback) {
 
-
       const container = `
         <div class="container rounded bg-white col-8">
           <div class="row modal-header d-flex flex-nowrap  justify-content-start">
@@ -54,7 +53,7 @@ export class UserInterface {
             <div class="col-4 text-center"><h4>Ronda ${pregunta.categoria.dificultad + 1}</h4></div>
             <div class="col-4"><p class="text-right">${premio.getAcumulado()}</p></div>
           </div>
-        </div> -->
+        </div>
       `
       this.main.innerHTML = container;
 
@@ -80,23 +79,88 @@ export class UserInterface {
     }
 
 
-    showPremio(jugador, premio, pregunta, Callback) {
+    showPremio(jugador, pregunta, premio, callbackContinue, callbackSalir) {
       const container = `
-        <div class="container rounded bg-white col-8">
+        <div class="container rounded bg-white col-6">
           <div class=" row modal-body">
-            <div class="choicesContainer container rounded pt-4">
+            <div class="choicesContainer container rounded pt-4 text-center">
               <h3>Felicidades! ${jugador.getNombre()}, Has ganado la ronda número ${pregunta.categoria.dificultad + 1}</h3>
-              <h4>Tienes una bonificación de ${premio.getAcumulado()} como premio por haber completado la ronda número ${pregunta.categoria.dificultad + 1} sin equivocarte</h4>
+              <h5>Tienes una bonificación de ${premio.getAcumulado()} como premio por haber completado esta ronda sin equivocarte</h5>
             </div>
           </div>
           <div class="footer row d-flex pt-3">
-            <div class="col-4"><h6>Yogador</6></div>
-            <div class="col-4 text-center"><h4>Ronda La que va</h4></div>
-            <div class="col-4"><p class="text-right">Aqui van las preguntas</p></div>
+            <div class="col-6 text-center mb-3"><button id="btn-continuar" class="btn btn-primary btn-lg form-control">Continuar</button></div>
+            <div class="col-6"><button id="btn-salir" class="btn btn-light btn-lg form-control">Salir</button></div>
+            
           </div>
-        </div> -->
+        </div>
       `
       this.main.innerHTML = container;
+
+
+      const btnContinuar = document.querySelector("#btn-continuar")
+      const btnSalir = document.querySelector("#btn-salir")
+
+      btnContinuar.addEventListener("click", () => callbackContinue());
+      btnSalir.addEventListener("click", () => callbackSalir());
+
+    }
+
+    showPerdida(callback) {
+      const container = `
+      <div class="container rounded bg-white col-8">
+        <div class="row modal-header d-flex flex-nowrap  justify-content-start">
+          <div class="enunciado ml-3 align-self-center "><h5 class="text-center">Fin del Juego</h5></div>
+        </div>
+        <div class=" row modal-body">
+          <h3>Te has equivocado, has perdido todos los puntos acumulados</h3>
+        </div>
+        <div class="footer row d-flex pt-3">
+            <div class="col-6 text-center mb-3"><button id="btn-continuar" class="btn btn-primary btn-lg form-control">Continuar</button></div>
+            </div>
+      </div> 
+      `
+      this.main.innerHTML = container;
+
+      const btnContinuar = document.querySelector("#btn-continuar");
+      btnContinuar.addEventListener("click", () => callback());
+    }
+
+
+    showFinal(historial, callbackJuegoNuevo, callbackTerminarSesion) {
+      const container = `
+      <div class="container rounded bg-white col-8">
+        <div class="row modal-header d-flex flex-nowrap  justify-content-start">
+          <div class="enunciado ml-3 align-self-center "><h5 class="text-center">Fin del Juego</h5></div>
+        </div>
+        <div class=" row modal-body">
+          <ul class="historialContainer container rounded">
+
+          </ul>
+        </div>
+        <div class="footer row d-flex pt-3">
+            <div class="col-6 text-center mb-3"><button id="btn-juego-nuevo" class="btn btn-primary btn-lg form-control">Juego nuevo</button></div>
+            <div class="col-6"><button id="btn-terminar-sesion" class="btn btn-light btn-lg form-control">Terminar la sesión</button></div>
+            
+          </div>
+      </div> 
+      `
+      this.main.innerHTML = container;
+
+      const historialContainer = document.querySelector(".historialContainer");
+      
+      for (var h in historial) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(`${historial[h].nombre}, Acumulado: ${historial[h].premioAcumulado}, Rondas ganadas: ${historial[h].rondasGanadas}`));
+        historialContainer.appendChild(li);
+      }
+      
+      const btnJuegoNuevo = document.querySelector("#btn-juego-nuevo")
+      const btnTerminarSesion = document.querySelector("#btn-terminar-sesion")
+
+      btnJuegoNuevo.addEventListener("click", () => callbackJuegoNuevo());
+      btnTerminarSesion.addEventListener("click", () => callbackTerminarSesion());
+
     }
   
 }

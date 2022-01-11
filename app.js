@@ -6,9 +6,8 @@ import { Premio } from "./models/Premio.js";
 import { UserInterface } from "./models/UserInterface.js"
 
 
-const renderPage = (jugador, pregunta, userInterface, categoria, premio) => {
-
-
+const renderPage = (jugador, pregunta, premio, userInterface) => {
+    
     if (localStorage.getItem("Jugador") === null) {
         userInterface.getName((inputNombre) => {
             jugador.setNombre(inputNombre)
@@ -20,36 +19,96 @@ const renderPage = (jugador, pregunta, userInterface, categoria, premio) => {
         console.log("Hay un usuario activo")
         jugador.setNombre(localStorage.getItem("Jugador"))
         userInterface.showQuestions(jugador, pregunta, premio, (optionSelected) => {
+            console.log(pregunta.categoria)
             const correctOption = pregunta.validarOpcion(optionSelected);
-
+            
             if (correctOption) {
                 pregunta.aumentarNumPregunta();
                 if (pregunta.getNumPregunta() === 5) {
-                    console.log(premio)
+
                     const dificultad = pregunta.categoria.getDificultad();
-                    premio.aumentarAcumulado(dificultad);
-                    // console.log(premio)
-
-                    userInterface.showPremio(jugador, premio, pregunta, (callback) => {
-                        console.log("Dale pues")
-                    })
-
-                    pregunta.setNumPregunta(0);
-                    pregunta.categoria.aumentarDificultad();
-
+                    premio.aumentarAcumulado(dificultad + 1)
                     
-                    console.log("Dificultad: " + dificultad)
-                    pregunta.categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad]);
-                    pregunta.aumentarPropiedades()
+                    userInterface.showPremio(
+                        jugador, 
+                        pregunta, 
+                        premio, 
+                        () => {
+                            console.log("Dificultad: " + dificultad)
+                            pregunta.setNumPregunta(0);
+                            pregunta.categoria.aumentarDificultad();
+                            console.log(pregunta.categoria.getDificultad())
+                            if (pregunta.categoria.getDificultad() === 5) {
+                                const historial = JSON.parse(localStorage.getItem("historial")) === null ? [] : JSON.parse(localStorage.getItem("historial"));
+                                historial.push({
+                                    nombre: jugador.getNombre(),
+                                    premioAcumulado: premio.getAcumulado(),
+                                    rondasGanadas: pregunta.categoria.getDificultad()
+                                })
+                                console.log(historial)
+                                localStorage.setItem("historial", JSON.stringify(historial))
+                                userInterface.showFinal(
+                                    historial, 
+                                    ()=>{main()}, 
+                                    ()=>{
+                                        localStorage.clear(),
+                                        main()
+                                    }
+                                );
+                            } else {
+                                pregunta.categoria.aleatorizarPeguntasDeRonda(BancoPreguntas[dificultad + 1]);
+                                pregunta.aumentarPropiedades()
+                                renderPage(jugador, pregunta, premio, userInterface)
+                            }
+                            
+                        },
+                        () => { // PENDIENTEEEEEEEEEEEE
+                            const historial = JSON.parse(localStorage.getItem("historial")) === null ? [] : JSON.parse(localStorage.getItem("historial"));
+                            historial.push({
+                                nombre: jugador.getNombre(),
+                                premioAcumulado: premio.getAcumulado(),
+                                rondasGanadas: pregunta.categoria.getDificultad()
+                            })
+                            console.log(historial)
+                            localStorage.setItem("historial", JSON.stringify(historial))
+                            userInterface.showFinal(
+                                historial, 
+                                ()=>{main()}, 
+                                ()=>{
+                                    localStorage.clear(),
+                                    main()
+                                }
+                            );
+                        }
+                    )
                     
 
                 } else {
                     pregunta.aumentarPropiedades();
-                    renderPage(jugador, pregunta, userInterface)
+                    renderPage(jugador, pregunta, premio, userInterface)
                 }
                 
             } else {
-                console.log("ah perdistes")
+                console.log("ah perdistes") // PENDIENTEEEEEEEEEEEE
+                premio.resetAcumulado()
+                userInterface.showPerdida(() => {
+                    const historial = JSON.parse(localStorage.getItem("historial")) === null ? [] : JSON.parse(localStorage.getItem("historial"));
+                            historial.push({
+                                nombre: jugador.getNombre(),
+                                premioAcumulado: 0,
+                                rondasGanadas: pregunta.categoria.getDificultad()
+                            })
+                            console.log(historial)
+                            localStorage.setItem("historial", JSON.stringify(historial))
+                            userInterface.showFinal(
+                                historial, 
+                                ()=>{main()}, 
+                                ()=>{
+                                    localStorage.clear(),
+                                    main()
+                                }
+                            );
+                })
             }
         });
     }
@@ -64,7 +123,7 @@ const main = () => {
     const pregunta = new Pregunta(categoria);
     const premio = new Premio();
     const userInterface = new UserInterface();
-    renderPage(jugador, pregunta, userInterface, categoria, premio)
+    renderPage(jugador, pregunta, premio, userInterface)
 }
 
 main();

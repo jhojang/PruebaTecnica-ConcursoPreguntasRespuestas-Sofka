@@ -42,7 +42,7 @@ export const BancoPreguntas = [
   },
 
   {
-    nombreCategoria: "primera",
+    nombreCategoria: "SEGUNDA ",
     preguntas: [
       {
         
@@ -84,7 +84,7 @@ export const BancoPreguntas = [
   },
 
   {
-    nombreCategoria: "primera",
+    nombreCategoria: "TERCERA",
     preguntas: [
       {
         
@@ -123,5 +123,89 @@ export const BancoPreguntas = [
         opcionCorrecta: "pregunta 17 s3"
       },
     ]
-  }
+  },
+
+  {
+    nombreCategoria: "Cuarta",
+    preguntas: [
+      {
+        
+        enunciado: "Enunciado primera pregunta s4",
+        opciones: [
+          "pregunta 1 s4", "pregunta 2 s4", "pregunta 3 s4", "pregunta 4 s4"
+        ],
+        opcionCorrecta: "pregunta 2 s4"
+      },
+      {
+        enunciado: "Enunciado segunda pregunta s4",
+        opciones: [
+          "pregunta 5 s4", "pregunta 6 s4", "pregunta 7 s4", "pregunta 8 s4"
+        ],
+        opcionCorrecta: "pregunta 8 s4"
+      },
+      {
+        enunciado: "Enunciado tercera pregunta s4",
+        opciones: [
+          "pregunta 9 s4", "pregunta 10 s4", "pregunta 11 s4", "pregunta 12 s4"
+        ],
+        opcionCorrecta: "pregunta 10 s4"
+      },
+      {
+        enunciado: "Enunciado cuarta pregunta s4",
+        opciones: [
+          "pregunta 13 s4", "pregunta 14 s4", "pregunta 15 s4", "pregunta 16 s4"
+        ],
+        opcionCorrecta: "pregunta 15 s4"
+      },
+      {
+        enunciado: "Enunciado quinta pregunta s4",
+        opciones: [
+          "pregunta 17 s4", "pregunta 18 s4", "pregunta 19 s4", "pregunta 20 s4"
+        ],
+        opcionCorrecta: "pregunta 17 s4"
+      },
+    ]
+  },
+
+  {
+    nombreCategoria: "Quinta",
+    preguntas: [
+      {
+        
+        enunciado: "Enunciado primera pregunta s5",
+        opciones: [
+          "pregunta 1 s5", "pregunta 2 s5", "pregunta 3 s5", "pregunta 4 s5"
+        ],
+        opcionCorrecta: "pregunta 2 s5"
+      },
+      {
+        enunciado: "Enunciado segunda pregunta s5",
+        opciones: [
+          "pregunta 5 s5", "pregunta 6 s5", "pregunta 7 s5", "pregunta 8 s5"
+        ],
+        opcionCorrecta: "pregunta 8 s5"
+      },
+      {
+        enunciado: "Enunciado tercera pregunta s5",
+        opciones: [
+          "pregunta 9 s5", "pregunta 10 s5", "pregunta 11 s5", "pregunta 12 s5"
+        ],
+        opcionCorrecta: "pregunta 10 s5"
+      },
+      {
+        enunciado: "Enunciado cuarta pregunta s5",
+        opciones: [
+          "pregunta 13 s5", "pregunta 14 s5", "pregunta 15 s5", "pregunta 16 s5"
+        ],
+        opcionCorrecta: "pregunta 15 s5"
+      },
+      {
+        enunciado: "Enunciado quinta pregunta s5",
+        opciones: [
+          "pregunta 17 s5", "pregunta 18 s5", "pregunta 19 s5", "pregunta 20 s5"
+        ],
+        opcionCorrecta: "pregunta 17 s5"
+      },
+    ]
+  },
 ];
