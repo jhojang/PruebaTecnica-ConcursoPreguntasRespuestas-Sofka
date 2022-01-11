@@ -2,13 +2,13 @@
 
 -Cuando el usuario abra el juego, lo primero que verá es un formulario para ingresar su nombre. Cuando ingrese su nombre, quedará logueado (Su nombre se almacena en el local Storage) y permanecerá así hasta que le dé click al botón "Terminar la sesión"
 
--Como base de datos de las preguntas es un archivo json. Las categorías son: Colores, Caricaturas, Capitales, Física y Estrellas.
+-Como base de datos sólo usé una lista de preguntas de un archivo json que yo hice. Las categorías son: Colores, Caricaturas, Capitales, Física y Estrellas.
 
 -Cada ronda es más dificil que la anterior
 
 -La persistencia de datos se hizo con el local storage del navegador
 
--Mientras el jugador esté logueado, no se perderá la pregunta actual en la que está si actualiza el navegador, como tampoco perderá la rona en la que etá ni el premio que tiene acumulado. Si se cierra la pestañacuando está en una pregunta, al volverla abrir, aparecerá en la preguna que estaba con el puntaba que llevaba y en la ronda en la que iba.
+-Mientras el jugador esté logueado, no se perderá la pregunta actual en la que está si actualiza la página, como tampoco perderá la ronda en la que etá ni el premio que tiene acumulado. Si se cierra la pestañacuando está en una pregunta, al volverla abrir, aparecerá en la preguna que estaba con el puntaba que llevaba y en la ronda en la que iba.
 
 -Al darle al botón "salir" (del quiz, no de la sesión) o caundo se equivoca de respuesta, se guardan los datos y se genera un historial que persiste, mientras esté la sesión.
 
